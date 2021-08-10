@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>display</title>
+	<link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+<form action="/logout">
+	<h1>Login Successful</h1>
+	<label>Welcome to your profile</label>
+	<button type="submit">LOGOUT</button>
+</form>
+<div class="border">
+	<table class="table__header">
+		<tr>
+			<th>Name:</th>
+			<td>{{user_name}}</td>
+			
+		</tr>
+		<tr>
+			<th>Email:</th>
+			<td>{{user_email}}</td>
+			
+		</tr>
+	</table>
+</div>
+<div class="border">
+<table class="table">
+	<tr class="table__header">
+	{% for header in headings %}
+		<th class="table__cell">{{ header }}</th>
+	{% endfor %}
+	</tr>
+	{% for row in account %}
+		<tr class="table__row">
+		{% for cell in row %}
+			<td class="table__cell">{{cell}}</td>
+		{% endfor %}
+		</tr>
+	{% endfor %}
+</table>
+</div>
+
+<div>
+<form method="post">
+	<label>Expense Description:</label>
+	<input type="text" name="one" id="expenseDesc">
+	<label>Amount:</label>
+	<input type="text" name="two" id="expenseAmount">
+	<label>Date:</label>
+	<input type="date" name="three" id="expenseDate"><br><br>
+	<input type="submit" value="ADD Expense"><br><br><br><br>
+</form>
+</div>
+<form action="/monthly_avg">
+	<button type="submit">MonthlyAvg</button><br><br><br><br>
+</form>
+</body>
+<html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>profile</title>
+</head>
+<body>
+<form action="/logout">
+	<h1>Login Successful</h1>
+	<label>Welcome to your profile</label>
+	<button type="submit">LOGOUT</button>
+</form>
+<div class="border">
+	<table class="worddark"></br></br></br></br>
+		<tr>
+			<td>Name:</td>
+			<td>{{user_name}}</td>
+			
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td>{{user_email}}</td>
+			
+		</tr>
+	</table>
+</div>
+
+<div>
+<form method="post">
+	<label>Expense Description:</label>
+	<input type="text" name="one" id="expenseDesc">
+	<label>Amount:</label>
+	<input type="text" name="two" id="expenseAmount">
+	<label>Date:</label>
+	<input type="date" name="three" id="expenseDate"><br><br>
+	<input type="submit" value="ADD Expense">
+</form>
+</div>
+
+</body>
+<html>

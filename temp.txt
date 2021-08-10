@@ -1,0 +1,13 @@
+mysql> DESCRIBE expense
+    -> ;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| email         | varchar(30) | YES  |     | NULL    |       |
+| expenseDesc   | varchar(50) | YES  |     | NULL    |       |
+| expenseDate   | date        | YES  |     | NULL    |       |
+| expenseAmount | int         | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+sudo mysql -h login.localhost -u root -p
